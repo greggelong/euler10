@@ -28,7 +28,7 @@ function draw(){
   rect(col,row,sz,sz);
   num++;
   col+=sz;
-  if (col%floor(width/sz)===0){
+  if (col>width-sz){
    row+=sz;
    col =0;
   }
