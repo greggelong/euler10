@@ -8,11 +8,11 @@ let sum =0;
 
 function setup(){
   createCanvas(windowWidth,windowHeight-50);
-  let sz = floor(width/100)
+  let sz = floor(windoWidth/100)
   background(0);
   showsum=createP("sum of primes: ", sum);
   print(num, isprime(num));
-  stroke(255);
+  stroke(255,0,0);
   //frameRate(20);
 }
 
