@@ -21,7 +21,7 @@ function draw(){
   if (isprime(num)){
     fill(255,0,0);
     sum = sum +num
-    showsum.html(num+" "+sum);
+    showsum.html("prime: "+num+" sum: "+sum);
   }else{
     fill(0,0,255);
   }
