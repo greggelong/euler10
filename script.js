@@ -12,7 +12,7 @@ function setup(){
   background(0);
   showsum=createP("sum of primes: ", sum);
   print(num, isprime(num));
-  stroke(255,0,0);
+  stroke(255,255,0);
   //frameRate(20);
 }
 
