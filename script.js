@@ -4,15 +4,22 @@ let num =0;
 let sz = 10;
 let showsum;
 let sum =0;
+let greg;
 
+function preload(){
+  greg =loadImage("greg1.jpg");
+}
 
 function setup(){
   createCanvas(windowWidth,windowHeight-50);
+  
   let sz = floor(width/100)
-  background(0);
+  greg.resize(width,height);
+  greg.loadPixels();
   showsum=createP("sum of primes: ", sum);
+  background(0)
   print(num, isprime(num));
-  stroke(255,255,0);
+  stroke(0);
   //frameRate(20);
 }
 
@@ -23,7 +30,8 @@ function draw(){
     sum = sum +num
     showsum.html("prime: "+num+" sum: "+sum);
   }else{
-    fill(0,0,255);
+    let colr = greg.get(col,row);
+    fill(colr[0],colr[1],colr[2]);
   }
   rect(col,row,sz,sz);
   num++;
